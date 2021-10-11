@@ -1,0 +1,4 @@
+name,age,university,degree
+rolf,25,mit,cs
+jose,34,oxford,ece
+anne,30,cambridge,eee
