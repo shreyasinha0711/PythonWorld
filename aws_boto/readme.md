@@ -11,3 +11,37 @@ Go back to the AWS Lambda console. select the function and under the Function co
 Upload the folder. lambda_function should be uploaded automatically.
 
 Run and Enjoy.
+
+
+
+"""Install these in cmd for pytest"""
+
+pip install -u pytest
+pip install pytest-html
+pip install pytest-mock
+pip install jsonschema
+
+"""Install these in cmd for test coverage"""
+pip install coverage
+pip install pytest-cov
+
+"""To run test cases """
+python -m pytest test_lambda_function.py
+
+""" To run single test cases """
+python -m pytest test_lambda_function.py::<test_case_function_name>
+ex: python -m pytest test_lambda_function.py::test_lambda_invalid_response
+
+"""To run the coverage of code"""
+
+coverage run lambda_function.py
+coverage report
+coverage report -m
+
+
+coverage run test_lambda_function.py
+coverage report
+coverage report -m
+
+"""To run the coverage of test cases"""
+pytest --cov=lambda_function
