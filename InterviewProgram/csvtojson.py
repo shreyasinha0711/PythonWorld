@@ -1,7 +1,7 @@
 import json
 dict_a ={}
 list_a = []
-with open("./file/csv_data.txt", "r") as data:
+with open("./file/csv_data.txt", "r", encoding='utf-8-sig') as data:
     data_header = data.readline().rstrip('\n').split(',')
     print(data_header)
     for line in data:
