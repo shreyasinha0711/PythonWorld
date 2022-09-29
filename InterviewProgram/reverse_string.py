@@ -1,20 +1,38 @@
-str1 = 'shreyareverse'
-#method1
-rev1 = ''
-for i in str1:
-    rev1 = i + rev1
-print("Reverse method 1 : "+ rev1)
+#Reverse the string
 
-#method2 -- recursive
-def rev2(str1):
-    if len(str1) == 0:
-        return str1
+string_input = input("Enter the String: ")
+string_reverse = ""
+
+for c in string_input:
+    string_reverse = c + string_reverse
+
+print(f"The reversed String: {string_reverse}")
+
+#palindrome
+
+if string_input == string_reverse:
+    print("Palindrome!!")
+else:
+    print("Not Palindrome!!")
+
+#reverse string using inbuild properties -- slice
+string_reverse_slice = string_input[::-1]
+print(f"The reversed String using slicing: {string_reverse_slice}")
+
+
+#reverse string using inbuild properties -- join and reversed function
+
+string_reverse_reversed = "".join(reversed(string_input))
+print(f"The reversed String using reversed function: {string_reverse_reversed}")
+
+
+#reverse string using recursion
+
+def reverse_string_rec(string_input):
+    if len(string_input) == 0:
+        return string_input
     else:
-        return rev2(str1[1:]) + str1[0]
-
-print("Reverse method 2 : " + rev2(str1))
+        return reverse_string_rec(string_input[1:]) + string_input[0]
 
 
-#method3 --join
-rev3 = ''.join(reversed(str1))
-print("Reverse method 3 : " + rev3)
+print(f"The reversed string using recursion function: {reverse_string_rec(string_input)}")
