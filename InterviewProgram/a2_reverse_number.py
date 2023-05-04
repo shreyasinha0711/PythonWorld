@@ -1,3 +1,7 @@
+# Take the input from user
+# Reverse the digit and check if palindrome number
+
+
 num_input = int(input("Enter the number: "))
 
 num_cp = num_input
