@@ -1,3 +1,7 @@
+# Take the input from user
+# Append in the empty list
+# Find its average rounding to 2 digits
+
 
 n = int(input("Enter the number of inputs: "))
 a = []
